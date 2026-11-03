@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal MMA - Inicio</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #0b0b0b;
+            color: #ffffff;
+            font-family: 'Arial Black', sans-serif;
+        }
+        .navbar-brand {
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+        }
+        .nav-link {
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        .top-stories-box {
+            background-color: #121212;
+            border-left: 4px solid #d20a0a;
+        }
+        .badge-rank {
+            background-color: #d20a0a;
+            color: #fff;
+            font-weight: bold;
+            padding: 8px 12px;
+            font-size: 1.1rem;
+        }
+        .story-item {
+            border-bottom: 1px solid #222;
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .story-item:hover h6 {
+            color: #d20a0a;
+        }
+        /* Ajuste de la imagen principal / hero */
+        .hero-img {
+            height: 420px;
+            object-fit: cover;
+            width: 100%;
+        }
+        .btn-ufc {
+            background-color: #d20a0a;
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 0;
+            padding: 12px 24px;
+            text-transform: uppercase;
+        }
+        .btn-ufc:hover {
+            background-color: #b00808;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar Estilo UFC -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-danger">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-danger" href="index.html">PORTAL <span class="text-white">MMA</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item"><a class="nav-link active text-danger" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="eventos.html">Eventos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="noticias.html">Noticias</a></li>
+                    <li class="nav-item"><a class="nav-link" href="peleadores.html">Peleadores</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section / Layout UFC -->
+    <main class="container my-4">
+        <div class="row g-4">
+            
+            <!-- Area Principal: Foto destacada y Titular grande -->
+            <div class="col-lg-8">
+                <div class="card bg-black text-white border-0 shadow">
+                    <div class="position-relative">
+                        <!-- Guardar imagen principal en: img/index-hero.jpg -->
+                        <img src="img/index-hero.jpg" class="card-img-top rounded-0 hero-img" alt="Faceoff MMA">
+                        <span class="badge bg-danger position-absolute top-0 start-0 m-3 px-3 py-2 text-uppercase">UFC VEGAS 123</span>
+                    </div>
+                    <div class="card-body px-0 pt-4">
+                        <h1 class="display-5 fw-bold text-uppercase tracking-wide">Choque de Generaciones</h1>
+                        <p class="text-muted fs-5">RENATO MOICANO Y TOM NOLAN CUMPLIERON CON LA BALANZA Y SE ENFRENTARÁN PREVIO AL SHOW DE ESTE SÁBADO EN LAS VEGAS.</p>
+                        <a href="noticias.html" class="btn btn-ufc mt-2">Ver Cartelera Completa</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna Lateral: Top Stories -->
+            <div class="col-lg-4">
+                <div class="top-stories-box p-4 h-100">
+                    <h3 class="text-uppercase fw-bold mb-4 pb-2 border-bottom border-danger">TOP STORIES</h3>
+                    
+                    <div class="d-flex align-items-start gap-3 story-item" onclick="mostrarDetalle('Renato Moicano: Mejores Finalizaciones')">
+                        <span class="badge-rank">1</span>
+                        <div>
+                            <small class="text-danger fw-bold d-block">UFC VEGAS 123</small>
+                            <h6 class="mb-0 text-uppercase fw-bold">RENATO MOICANO: MEJORES FINALIZACIONES</h6>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-start gap-3 story-item" onclick="mostrarDetalle('Piera Rodríguez en Acción')">
+                        <span class="badge-rank">2</span>
+                        <div>
+                            <small class="text-danger fw-bold d-block">UFC VEGAS 123</small>
+                            <h6 class="mb-0 text-uppercase fw-bold">PIERA RODRÍGUEZ: BANDERA VENEZOLANA EN ACCIÓN</h6>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-start gap-3 story-item" onclick="mostrarDetalle('Moicano vs. Nolan Status')">
+                        <span class="badge-rank">3</span>
+                        <div>
+                            <small class="text-danger fw-bold d-block">UFC VEGAS 123</small>
+                            <h6 class="mb-0 text-uppercase fw-bold">MOICANO VS. NOLAN: STATUS EN JUEGO</h6>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-start gap-3 story-item" onclick="mostrarDetalle('Pelia Gratis: Moicano vs Saint Denis')">
+                        <span class="badge-rank">4</span>
+                        <div>
+                            <small class="text-danger fw-bold d-block">UFC VEGAS 123</small>
+                            <h6 class="mb-0 text-uppercase fw-bold">PELEA GRATIS: MOICANO VS. SAINT DENIS</h6>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-start gap-3 story-item" onclick="mostrarDetalle('UFC 334 Títulos en Juego')">
+                        <span class="badge-rank">5</span>
+                        <div>
+                            <small class="text-danger fw-bold d-block">UFC 334</small>
+                            <h6 class="mb-0 text-uppercase fw-bold">DOS TÍTULOS EN JUEGO EL 14 DE NOV.</h6>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-center py-4 mt-5 border-top border-secondary">
+        <p class="mb-0 text-muted">&copy; 2026 Portal de MMA. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    <!-- JavaScript para Interactividad -->
+    <script>
+        function mostrarDetalle(titulo) {
+            alert("Cargando noticia: " + titulo);
+        }
+    </script>
+</body>
+</html>
